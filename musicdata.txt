@@ -1,0 +1,7 @@
+1,guitar,PRS,blue,980.56
+2,drums,yamaha,red,879.98
+3,bass,fender,silver,999.67
+4,guitar,gibson,black,1300.43
+6,drums,DW,green,1200.21
+7,guitar,fender,blue,1100.50
+8,bass,PRS,orange,875.44
