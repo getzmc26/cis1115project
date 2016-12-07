@@ -1,7 +1,7 @@
 package myproject;
 
 /**
- * Music Store
+ * Music Store class. This class:
  * @author Matt Getz
  * 
  */
