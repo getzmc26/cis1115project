@@ -48,7 +48,7 @@ public class MusicAppMenu {
             System.out.println("17 = Retrieve All: Order by instrument / price v2");
             System.out.println("18 = Statistics");
 
-            choice = Prompt.getInt("\nNumber of choice: ", 0, 17);
+            choice = Prompt.getInt("\nNumber of choice: ", 0, 18);
 
             if (choice == 1) {
                 System.out.printf("\n%5s %15s %15s %15s %15s %n", "ID", "Instrument", "Brand", "Color", "Price ($)");
