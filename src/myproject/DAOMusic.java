@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -26,6 +27,13 @@ public class DAOMusic {
 
     public DAOMusic() {
         myList = new ArrayList();
+        try {
+            Files.createFile(Paths.get(fileName));
+        } catch (FileAlreadyExistsException fae) {
+            System.out.println("");
+        } catch (IOException ex) {
+            Logger.getLogger(DAOMusic.class.getName()).log(Level.SEVERE, null, ex);
+        }
         readList();
     }
 
