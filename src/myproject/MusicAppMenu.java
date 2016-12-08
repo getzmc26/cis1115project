@@ -45,7 +45,8 @@ public class MusicAppMenu {
             System.out.println("14 = Retrieve All: Order by instrument A-Z / price ascending");
             System.out.println("15 = Retrieve All: Order by instrument Z-A / price descending");
             System.out.println("16 = Retrieve All: Order by instrument Z-A / price ascending");
-            System.out.println("17 = Statistics");
+            System.out.println("17 = Retrieve All: Order by instrument / price v2");
+            System.out.println("18 = Statistics");
 
             choice = Prompt.getInt("\nNumber of choice: ", 0, 17);
 
@@ -85,12 +86,10 @@ public class MusicAppMenu {
                         data.delete(id);
                         System.out.println("Entry at ID " + id + " has been deleted.");
                         count++;
-                    }
-                    else if (answer.equalsIgnoreCase("n")) {
+                    } else if (answer.equalsIgnoreCase("n")) {
                         System.out.println("\nDelete cancelled.");
                         count++;
-                    }
-                    else {
+                    } else {
                         System.out.println("\nEnter 'y' for yes or 'n' for no.");
                     }
                 }
@@ -117,6 +116,8 @@ public class MusicAppMenu {
             } else if (choice == 16) {
                 System.out.println(data.orderByInstrumentDescendPriceAscend());
             } else if (choice == 17) {
+                System.out.println(data.orderByInstrumentPrice2());
+            } else if (choice == 18) {
                 System.out.println("\nStatistics: ");
                 System.out.println(data.statistics());
             } else if (choice == 0) {

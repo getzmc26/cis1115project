@@ -210,6 +210,20 @@ public class DAOMusic {
         return this.toString();
     }
 
+    public String orderByInstrumentPrice2() {
+        System.out.printf("\n%5s %15s %15s %15s %15s %n", "ID", "Instrument", "Brand", "Color", "Price ($)");
+        System.out.println("------------------------------------------------------------------------");
+        myList.sort((Music m1, Music m2) -> {
+            if(m1.getInstrument().equals(m2.getInstrument())) {
+                return Double.compare(m1.getPrice(), m2.getPrice());
+            }
+            else {
+                return m1.getInstrument().compareTo(m2.getInstrument());
+            }
+        });
+        return this.toString();
+    }
+    
     private void readList() {
         Path path = Paths.get(fileName);
         try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
